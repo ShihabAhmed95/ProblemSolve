@@ -7,12 +7,12 @@ vector <int> v;
 void sievePrime()
 {
     sieve[1] = 1;
-    for(long long int i=4; i<=10000000; i+=2)
+    for(long long int i=4; i<=10000000; i+=2) //deleting all even numbers from 4
     {
         sieve[i]=1;
     }
 
-    for(long long int i=3; i<=10000000; i+=2)
+    for(long long int i=3; i<=10000000; i+=2)  //deleting all multiplicatns of odd numbers from 3 upto 10000000
     {
         if(!sieve[i])
         {
@@ -22,7 +22,7 @@ void sievePrime()
             }
         }
     }
-    for(long long int i=2;i<=10000000;i++)
+    for(long long int i=2;i<=10000000;i++)  //collecting all prime numbers in a vector
     {
         if(!sieve[i])
         {
